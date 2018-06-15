@@ -1,0 +1,19 @@
+public enum Role
+{
+    BARD,
+    CLERIC,
+    DRUID,
+    ENCHANTER,
+    MONK,
+    NECROMANCER,
+    NINJA,
+    PALADIN,
+    PIRATE,
+    RANGER,
+    ROGUE,
+    SHADOWKNIGHT,
+    SORCERER,
+    WARLOCK,
+    WARRIOR,
+    WIZARD;
+}
