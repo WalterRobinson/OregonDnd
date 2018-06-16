@@ -5,6 +5,8 @@ public class Weapon
   int cooldown;
   int currcool=0;
   int price;
+  boolean isMagic;
+  boolean isRanged;
   public Weapon(String n, int a, int c, int p)
   {
     name = n;
