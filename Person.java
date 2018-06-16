@@ -7,8 +7,16 @@ int currHealth;
 
 Role r;
 Weapon w;
-ArrayList<Item> inventory = new ArrayList();
-
+Item headspot;
+Item chestspot;
+Item legspot;
+Item footspot;
+Item beltspot;
+Item ring1;
+Item ring2
+Item handspot;
+  
+  
 Public Person(String n, Role ro, int h)
 {
 name = n;
