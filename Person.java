@@ -27,6 +27,6 @@ name = n;
 r = ro;
 maxHealth = h;
 currHealth = maxHealth;
-w = new Weapon("Fists", 5, 20, 0);
+w = new Weapon("Fists", 5, 20, 0, false, false);
 }
 }
