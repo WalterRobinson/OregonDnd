@@ -7,7 +7,8 @@ public class Weapon
   int price;
   boolean isMagic;
   boolean isRanged;
-  public Weapon(String n, int a, int c, int p, boolean isM, boolean isR)
+  Status possStatus;
+  public Weapon(String n, int a, int c, int p, boolean isM, boolean isR, Status stat)
   {
     name = n;
     atkdam = a;
@@ -15,6 +16,7 @@ public class Weapon
     price = p;
     isMagic=isM;
     isRanged=isR;
+    possStatus=stat;
   }
 
 }
