@@ -4,6 +4,9 @@ public class Person
 String name;
 int maxHealth;
 int currHealth;
+int level=1;
+int expNecessary=100;
+int currExp=0;
 
 Role r;
 Weapon w;
@@ -24,5 +27,6 @@ name = n;
 r = ro;
 maxHealth = h;
 currHealth = maxHealth;
+w = new Weapon("Fists", 5, 20, 0);
 }
 }
