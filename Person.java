@@ -7,6 +7,7 @@ int currHealth;
 int level=1;
 int expNecessary=100;
 int currExp=0;
+boolean isAlive=true;
 
 int Atk=10;
 int Mtk=10;
@@ -45,5 +46,16 @@ public addStatus(Status s){
 }
 public removeStatus(Status s){
   effects.remove(s);
+}
+public takeDamage(int dam){
+  currHealth=currHealth-dam;
+  if(currHealth>maxHealth)
+  {
+   currHealth=maxHealth; 
+  }
+  if(currHealth<=0)
+  {
+    isAlive=false;
+  }
 }
 }
