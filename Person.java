@@ -37,9 +37,13 @@ maxHealth = h;
 currHealth = maxHealth;
 w = new Weapon("Fists", 5, 20, 0, false, false, null);
 }
-public attack(Person e)
+public void tick(Person e)
 {
-  
+  w.tick(this,e);
+  for(int i = 0; i<effects.size();i++)
+  {
+    effects.get(i).tick(this);
+  }
 }
 public double getMultiplier()
 {
