@@ -1,3 +1,4 @@
+import java.util.*;
 public class Weapon
 {
   String name;
@@ -11,7 +12,8 @@ public class Weapon
   Status possEnemyStatus;
   double enemyStatusChance;//chance that enemy receives status, less than 1
   Status possSelfStatus;
-  public Weapon(String n, int a, double dM, int c, int p, boolean isM, boolean isR, Status statE, double statusChance, Status statS)
+  ArrayList<Role> allowedUsers = new ArrayList();
+  public Weapon(String n, int a, double dM, int c, int p, boolean isM, boolean isR, Status statE, double statusChance, Status statS, Role[] roles)
   {
     name = n;
     atkdam = a;
@@ -23,6 +25,10 @@ public class Weapon
     possEnemyStatus=statE;
     enemyStatusChance=statusChance;
     possSelfStatus=statS;
+    for(int i = 0; i<roles.length;i++)
+    {
+      allowedUsers.add(roles[i]);
+    }
   }
   public void tick(Person p, Person e)
   {
