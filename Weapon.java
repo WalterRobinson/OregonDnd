@@ -46,12 +46,16 @@ public class Weapon
     if(possEnemyStatus!=null){
      if(Math.random()<enemyStatusChance)
      {
-      e.addStatus(new Status(possEnemyStatus.name, possEnemyStatus.timeLimit , possEnemyStatus.atkMult , possEnemyStatus.damOverTime , possEnemyStatus.damageTime )); 
+      e.addStatus(new Status(possEnemyStatus.makeCopy())); 
      }
     }
     if(possSelfStatus!=null)
     {
-    p.addStatus(new Status(possSelfStatus.name, possSelfStatus.timeLimit , possSelfStatus.atkMult , possSelfStatus.damOverTime , possSelfStatus.damageTime));
+      p.addStatus(new Status(possSelfStatus.makeCopy()));
     }
+  }
+  public Weapon makeCopy()
+  {
+    return new Weapon(name, atkdam, cooldown,price,isMagic,isRanged,possEnemyStatus.makeCopy(),enemyStatusChance,possSelfStatus.makeCopy());
   }
 }
