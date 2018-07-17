@@ -37,17 +37,26 @@ maxHealth = h;
 currHealth = maxHealth;
 w = new Weapon("Fists", 5, 20, 0, false, false, null);
 }
-public attack()
+public attack(Person e)
 {
   
 }
-public addStatus(Status s){
+public double getMultiplier()
+{
+  int mult = 1;
+  for(int i = 0; i<effects.size;i++)
+  {
+   mult=mult*effects.get(i).atkMult; 
+  }
+  return mult;
+}
+public void addStatus(Status s){
  effects.add(s); 
 }
-public removeStatus(Status s){
+public void removeStatus(Status s){
   effects.remove(s);
 }
-public takeDamage(int dam){
+public void takeDamage(int dam){
   currHealth=currHealth-dam;
   if(currHealth>maxHealth)
   {
