@@ -15,7 +15,7 @@ atkMult=aM;
 damOverTime=dOT;
 damageTime=dT;
 }
-public tick(Person p);
+public void tick(Person p);
   {
    count++;
    if(count%damageTime==0)
@@ -27,4 +27,8 @@ public tick(Person p);
      p.removeStatus(this);
    }
   }
+}
+public Status makeCopy()
+{
+ return new Status(name,timeLimit,atkMult,damOverTime,damageTime); 
 }
