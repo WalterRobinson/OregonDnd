@@ -64,6 +64,11 @@ public class Weapon
   }
   public Weapon makeCopy()
   {
-    return new Weapon(name, atkdam, defMult, cooldown, price, isMagic, isRanged, possEnemyStatus.makeCopy(), enemyStatusChance,possSelfStatus.makeCopy());
+    Role[] r = new Role[allowedUsers.size()];
+    for(int i = 0; i<r.length;i++)
+    {
+      r[i]=allowedUsers.get(i);
+    }
+    return new Weapon(name, atkdam, defMult, cooldown, price, isMagic, isRanged, possEnemyStatus.makeCopy(), enemyStatusChance,possSelfStatus.makeCopy(),r);
   }
 }
