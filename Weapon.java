@@ -2,6 +2,7 @@ public class Weapon
 {
   String name;
   int atkdam;
+  double defMult;
   int cooldown;
   int currcool=0;
   int price;
@@ -10,10 +11,11 @@ public class Weapon
   Status possEnemyStatus;
   double enemyStatusChance;//chance that enemy receives status, less than 1
   Status possSelfStatus;
-  public Weapon(String n, int a, int c, int p, boolean isM, boolean isR, Status statE, double statusChance, Status statS)
+  public Weapon(String n, int a, double dM, int c, int p, boolean isM, boolean isR, Status statE, double statusChance, Status statS)
   {
     name = n;
     atkdam = a;
+    defMult=dM;
     cooldown = c;
     price = p;
     isMagic=isM;
@@ -56,6 +58,6 @@ public class Weapon
   }
   public Weapon makeCopy()
   {
-    return new Weapon(name, atkdam, cooldown,price,isMagic,isRanged,possEnemyStatus.makeCopy(),enemyStatusChance,possSelfStatus.makeCopy());
+    return new Weapon(name, atkdam, defMult, cooldown, price, isMagic, isRanged, possEnemyStatus.makeCopy(), enemyStatusChance,possSelfStatus.makeCopy());
   }
 }
