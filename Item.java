@@ -18,13 +18,13 @@ public Item(String n, int p, ArmorType pos, double atkm, double defm, double str
   defMult = defm;
   stressMult = strm;
 }
-public double beforeAttack(){
- return attackMult; 
-}
+//public double beforeAttack(){
+ //return attackMult; 
+//}
 public void afterAttack();
-public double beforeDefend(){
- return defMult; 
-}
+//public double beforeDefend(){
+ //return defMult; 
+//}
 public void afterDefend();
 public double gainingStress(){
  return stressMult; 
