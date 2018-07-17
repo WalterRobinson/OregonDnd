@@ -31,7 +31,7 @@ name = n;
 r = ro;
 maxHealth = h;
 currHealth = maxHealth;
-w = new Weapon("Fists", 5, 20, 0, false, false, null);
+w = new Weapon("Fists", 5, 1.0 20, 0, false, false, null, 0.0 null);
 }
 public void tick(Person e)
 {
