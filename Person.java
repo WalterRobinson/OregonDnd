@@ -31,7 +31,7 @@ name = n;
 r = ro;
 maxHealth = h;
 currHealth = maxHealth;
-w = new Weapon("Fists", 5, 1.0 20, 0, false, false, null, 0.0 null);
+w = new Weapon("Fists", 5, 1.0 20, 0, false, false, null, 0.0, null,{Role.BARD,Role.CLERIC,Role.DRUID,Role.ENCHANTER,Role.MONK,Role.NECROMANCER,Role.NINJA,Role.PALADIN,Role.PIRATE,Role.RANGER,Role.ROGUE,Role.SHADOWKNIGHT,Role.SORCERER,Role.WARLOCK,Role.WARRIOR,Role.WIZARD});
 }
 public void tick(Person e)
 {
