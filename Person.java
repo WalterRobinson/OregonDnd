@@ -23,7 +23,7 @@ Item legspot;
 Item footspot;
 Item beltspot;
 Item ring1;
-Item ring2
+Item ring2;
 
 int stressLevel=0;
   
@@ -52,7 +52,13 @@ public double getMultiplier()
   {
    mult=mult*effects.get(i).atkMult; 
   }
+  mult=mult*headspot.attackMult*beltspot.attackMult*ring1.attackMult*ring2.attackMult*footspot.attackMult*handspot.attackMult*chestspot.attackMult*legspot.attackMult;
   return mult;
+}
+public double getDefMultiplier()
+{
+  int mult = 1;
+  mult=mult*headspot.defMult*beltspot.defMult*ring1.defMult*ring2.defMult*footspot.defMult*handspot.defMult*chestspot.defMult*legspot.defMult;
 }
 public void addStatus(Status s){
  effects.add(s); 
