@@ -6,9 +6,10 @@ public class Encounter
     ArrayList<Integer> damage = new ArrayList();// damage, stress, and payout all are the same length as options, and correspond to each option.
     ArrayList<Integer> stress=new ArrayList();
     ArrayList<Object> payout=new ArrayList();//could be weapons, armor, or even new people
-    ArrayList<Integer> money=new ArrayList();//so if buying, selling, or finding money
+    ArrayList<Integer> money=new ArrayList();//so if buying, selling, or finding money, positive number means money gain, make sure if money is negative and more than player has, put a rejection message
+    ArrayList<int[]> statChange=new ArrayList();//order is Atk,Mtk,Def,Mef. positive number means stat increase
     
-    public Encounter(String t, String[] o, int[] d, int[] s, Object[] p, int[] m)
+    public Encounter(String t, String[] o, int[] d, int[] s, Object[] p, int[] m, int[][] stats)
     {
         text=t;
         for(int i = 0; i<o.length;i++)
@@ -18,6 +19,7 @@ public class Encounter
             stress.add(s[i]);
             payout.add(p[i].makeCopy());
             money.add(m[i]);
+            statChange.add(stats[i]);
         }
         
     }
