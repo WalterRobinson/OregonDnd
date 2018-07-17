@@ -34,13 +34,14 @@ public class Weapon
   public void Attack(Person p, Person e)
   {
     double multiplier = p.getMultiplier();
+    double defMultiplier = e.getDefMultiplier();
     if(isMagic)
     {
       e.takeDamage( (int)( ( ( (double)(30+p.Mtk) )/(30+e.Mef) )*atkdam*multiplier ) +1 ) 
     }
     else
     {
-      e.takeDamage( (int)( ( ( (double)(30+p.Atk) )/(30+e.Def) )*atkdam*multiplier ) +1 )
+      e.takeDamage( (int)( ( ( (double)(30+p.Atk) )/(30+e.Def) )*atkdam*multiplier/defMultiplier ) +1 )
     }
     if(possEnemyStatus!=null){
      if(Math.random()<enemyStatusChance)
