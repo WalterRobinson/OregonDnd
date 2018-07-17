@@ -22,7 +22,16 @@ public class Weapon
     enemyStatusChance=statusChance;
     possSelfStatus=statS;
   }
-  public Attack(Person p, Person e)
+  public void tick(Person p, Person e)
+  {
+    currcool++;
+    if(currcool==cooldown)
+    {
+      currcool=0;
+      Attack(p,e);
+    }
+  }
+  public void Attack(Person p, Person e)
   {
     double multiplier = p.getMultiplier();
     if(isMagic)
