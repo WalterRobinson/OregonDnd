@@ -30,7 +30,12 @@ public Item(String n, int p, ArmorType pos, double atkm, double defm, double str
   
 public Item makeCopy()
 {
-  return new Item(name,price,place,attackMult,defMult,stressMult,enemyDam,selfDam);
+    Role[] r = new Role[allowedUsers.size()];
+    for(int i = 0; i<r.length;i++)
+    {
+      r[i]=allowedUsers.get(i);
+    }
+  return new Item(name,price,place,attackMult,defMult,stressMult,enemyDam,selfDam,r);
 }
 //public double beforeAttack(){
  //return attackMult; 
