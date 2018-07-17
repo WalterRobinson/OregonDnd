@@ -26,6 +26,8 @@ Item ring2
 
 int stressLevel=0;
   
+ArrayList<Status> effects = new ArrayList();
+  
 public Person(String n, Role ro, int h)
 {
 name = n;
@@ -34,8 +36,14 @@ maxHealth = h;
 currHealth = maxHealth;
 w = new Weapon("Fists", 5, 20, 0, false, false, null);
 }
-public Attack()
+public attack()
 {
   
+}
+public addStatus(Status s){
+ effects.add(s); 
+}
+public removeStatus(Status s){
+  effects.remove(s);
 }
 }
