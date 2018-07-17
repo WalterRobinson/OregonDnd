@@ -59,6 +59,7 @@ public double getDefMultiplier()
 {
   int mult = 1;
   mult=mult*headspot.defMult*beltspot.defMult*ring1.defMult*ring2.defMult*footspot.defMult*handspot.defMult*chestspot.defMult*legspot.defMult;
+  return mult;
 }
 public void addStatus(Status s){
  effects.add(s); 
