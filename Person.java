@@ -3,10 +3,6 @@ public class Person
 {
 String name;
 int maxHealth;
-int currHealth;
-int level=1;
-int expNecessary=100;
-int currExp=0;
 boolean isAlive=true;
 
 int Atk=10;
@@ -44,6 +40,28 @@ public void tick(Person e)
   {
     effects.get(i).tick(this);
   }
+}
+public Person makeCopy(){
+  Person copy = new Person(name, r, h);
+  copy.w=w.makeCopy();
+  copy.headspot=headspot.makeCopy();
+  copy.chestspot=chestspot.makeCopy();
+  copy.handspot=handspot.makeCopy();
+  copy.legspot=legspot.makeCopy();
+  copy.footspot=footspot.makeCopy();
+  copy.beltspot=beltspot.makeCopy();
+  copy.ring1=ring1.makeCopy();
+  copy.ring2=ring2.makeCopy();
+  copy.Atk=Atk;
+  copy.Def=Def;
+  copy.Mtk=Mtk;
+  copy.Mef=Mef;
+  copy.stressLevel=stressLevel;
+  for(int i = 0; i<effects.size();i++)
+  {
+    copy.effects.add(effects.get(i).makeCopy());
+  }
+  return copy;
 }
 public double getMultiplier()
 {
