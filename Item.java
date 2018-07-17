@@ -11,8 +11,8 @@ int enemyDam;
 int selfDam;//negative for healing
   
 ArmorType place;
-
-public Item(String n, int p, ArmorType pos, double atkm, double defm, double strm, int eDam, int sDam)
+ArrayList<Role> allowedUsers = new ArrayList();
+public Item(String n, int p, ArmorType pos, double atkm, double defm, double strm, int eDam, int sDam, Role[] roles)
 {
   name = n;
   price = p;
@@ -22,6 +22,10 @@ public Item(String n, int p, ArmorType pos, double atkm, double defm, double str
   stressMult = strm;
   enemyDam=eDam;
   selfDam=sDam;
+  for(int i = 0; i<roles.length;i++)
+  {
+    allowedUsers.add(roles[i]);
+  }
 }
   
 public Item makeCopy()
