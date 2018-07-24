@@ -1,6 +1,8 @@
 import java.util.*;
 public class Person
 {
+final Role[] beginningRoles = {Role.CLERIC,Role.DRUID,Role.FARMER,Role.MAGE, Role.MONK,Role.NECROMANCER,Role.NINJA,Role.PALADIN,Role.PIRATE,Role.RANGER,Role.ROGUE,Role.SHADOWKNIGHT,Role.SORCERER,Role.WARLOCK,Role.WARRIOR,Role.WIZARD};
+final Role[][] roleProgress = {{Role.PRIEST,Role.CLERIC_OF_WAR},{Role.SHAMAN,Role.FOREST_DRUID},{Role.REAPER,Role.SEEDER},{Role.VANISHER, Role.BATTLE_MAGE,Role.TOXIN_SPREADER},{Role.SHADOW_MONK,Role.MONK_OF_LIFE},{Role.LICH,Role.SPIRIT_NECROMANCER},{Role.ASSASSIN,Role.SABOTAGER},{Role.HOLY_KNIGHTmRole.GUARDIAN},{Role.BUCCANEER,Role.CAPTAIN,Role.SWASHBUCKLER},{Role.HUNTER,Role.MARKSMAN},{Role.THIEF,Role.HIGHWAYMAN},{Role.PLAGUEKNIGHT,Role.DEATHKNIGHT},{Role.SWORD_MAGE,Role.ELEMENTAL_SORCERER},{Role.ELDRITCH,Role.OATHBREAKER},{Role.BERSERKER,Role.KNIGHT,Role.SAMURAI,Role.LEADER},{Role.ELEMENTAL_WIZARD,Role.TIME_WIZARD,Role.ANCIENT_WIZARD}};
 String name;
 int maxHealth;
 boolean isAlive=true;
@@ -31,7 +33,7 @@ name = n;
 r = ro;
 maxHealth = h;
 currHealth = maxHealth;
-w = new Weapon("Fists", 5, 1.0 20, 0, false, false, null, 0.0, null,{Role.BARD,Role.CLERIC,Role.DRUID,Role.ENCHANTER,Role.MONK,Role.NECROMANCER,Role.NINJA,Role.PALADIN,Role.PIRATE,Role.RANGER,Role.ROGUE,Role.SHADOWKNIGHT,Role.SORCERER,Role.WARLOCK,Role.WARRIOR,Role.WIZARD});
+w = new Weapon("Fists", 5, 1.0 20, 0, false, false, null, 0.0, null,{Role.CLERIC,Role.DRUID,Role.FARMER,Role.MAGE, Role.MONK,Role.NECROMANCER,Role.NINJA,Role.PALADIN,Role.PIRATE,Role.RANGER,Role.ROGUE,Role.SHADOWKNIGHT,Role.SORCERER,Role.WARLOCK,Role.WARRIOR,Role.WIZARD});
 }
 public void tick(Person e)
 {
